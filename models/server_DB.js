@@ -1,5 +1,6 @@
 //this scropt is to get the data on the blockchain by server
 //先要到itweb啓動npm start
+const config=require('../config/development_config');
 const request=require('request');
 var Web3 = require("web3")
 var web3 = new Web3
@@ -43,7 +44,7 @@ class ServerDB{
             obj.Contract_Address = address;
 
             console.log(obj);
-            request.post({url:"http://140.119.163.196:3000/save", form: {data:JSON.stringify(obj)}}, function(err,httpResponse,body){
+            request.post({url:`http://${config.ip.local}:3000/save`, form: {data:JSON.stringify(obj)}}, function(err,httpResponse,body){
                 console.log(obj);
                 console.log(body);
             })
