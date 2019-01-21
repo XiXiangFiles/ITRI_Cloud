@@ -104,7 +104,7 @@ loadScript("deploy_test.js")
 5. 將終端機中印出來的合約地址，更改到`MC_address`檔案中
 ![](https://i.imgur.com/TbZkMZV.png)
 
-6. 退出到`BP-web`資料夾中
+6. 退出到`ITRI_Cloud`資料夾中
 
 7. 修改`views/index.ejs、views/manager.ejs、registerid.ejs、searchbyidtime.ejs`中dataAPI路徑
 ````javascript=
