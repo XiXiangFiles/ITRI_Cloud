@@ -5,6 +5,7 @@ var web3 = new Web3
 web3.setProvider(new Web3.providers.HttpProvider("http://localhost:8545"));
 var http = require('http');
 const db = require('./connection_db');
+const fs = require('fs');
 
 var abi = [{
     "constant": true,
@@ -58,7 +59,9 @@ var abi = [{
 }];
 
 // 合约地址
-var address_main = "0x4ed0b48c96e2502998e70a7d6b1ed8dddc95ff86";
+//var address_main = "0xd9f40c8f8217edc32e0f39bcf2f5a4857e3f0005";
+var address_main = fs.readFileSync('./MC_address.txt').toString();
+console.log(`address_main:${address_main}`);
 //主要要更改輸入id的部分
 // 通过ABI和地址获取已部署的合约对象
 var con = web3.eth.contract(abi).at(address_main);
