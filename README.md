@@ -136,5 +136,6 @@ npm start
 
 ## note
 * 在此系統中，所有交易都使用`account[0]`送出
+* 資料庫Schema 在 DataBase Schema 資料夾中
 
 ###### tags: `blockchain`
